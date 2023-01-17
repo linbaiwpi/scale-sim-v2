@@ -1,3 +1,25 @@
+# Development environment building
+
+Make it compatible to Python>=3.8 for **commit 2d3fc8e730e72f8a7a83d6f12c26a2de1b558d6f**
+
+## Using Conda
+```$ conda create -n scale-sim-v2 python=3.8 -y```
+
+```$ conda activate scale-sim-v2```
+
+```$ pip install -r requirements.txt```
+
+### Change the following files
+
+replace all `np.int` into `np.int32`
+
+**scalesim/compute/operand_matrix.py:** Line 33 - 35
+
+**scalesim/memory/double_buffered_scratchpad_mem.py:** Line 24 - 26
+
+
+# ==================== README from official repository ====================
+
 # Systolic CNN AcceLErator Simulator (SCALE Sim) v2
 
 [![Documentation Status](https://readthedocs.org/projects/scale-sim-project/badge/?version=latest)](https://scale-sim-project.readthedocs.io/en/latest/?badge=latest)
